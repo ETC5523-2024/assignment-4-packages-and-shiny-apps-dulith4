@@ -4,5 +4,5 @@
 #'
 #' @export
 run_app <- function() {
-  shiny::runApp(system.file("shiny", package = "wintermovies"))
+  shiny::runApp(system.file("app.R", package = "wintermovies"))
 }
