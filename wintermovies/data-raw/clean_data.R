@@ -17,8 +17,9 @@ holiday_movies <- holiday_movies %>%
 
 
 
-save(holiday_movies, file = "C:/Users/hansa/Downloads/assignment-4-packages-and-shiny-apps-dulith4/wintermovies/data/holiday_movies.rda")
-save(cleaned_holiday_movie_genres, file = "C:/Users/hansa/Downloads/assignment-4-packages-and-shiny-apps-dulith4/wintermovies/data/cleaned_holiday_movie_genres.rda")
+usethis::use_data(holiday_movies, overwrite = TRUE)
+usethis::use_data(cleaned_holiday_movie_genres, overwrite = TRUE)
+
 
 
 
