@@ -2,6 +2,7 @@ library(shiny)
 library(dplyr)
 library(plotly)
 library(wintermovies)
+library(bslib)
 
 # Load the cleaned datasets from the package
 
@@ -11,24 +12,40 @@ load(system.file("data", "cleaned_holiday_movie_genres.rda", package = "wintermo
 # Define UI for the Shiny app
 
 ui <- fluidPage(
+  theme = bs_theme(bootswatch = "minty"),  # Apply a theme from bslib
+
   titlePanel("Holiday Movies Explorer"),
 
   sidebarLayout(
     sidebarPanel(
-      # Sort the years in ascending order
       selectInput("year", "Select Year", choices = sort(unique(holiday_movies$year))),
       selectInput("genre", "Select Genre", choices = unique(cleaned_holiday_movie_genres$genres)),
-      p("Use the dropdown menus to filter the data by year and genre.")
+      p("Use the dropdown menus to filter the data by year and genre."),
+
+      # Add descriptions for the table columns using tags$ul and tags$li
+      p("The table below shows holiday movies from the selected year and genre. The columns represent:"),
+      tags$ul(
+        tags$li("Year: The year the movie was released"),
+        tags$li("Runtime Minutes: The length of the movie in minutes"),
+        tags$li("Num Votes: The number of votes the movie has received on IMDb"),
+        tags$li("Genre: The genre of the movie")
+      )
     ),
 
     mainPanel(
       tableOutput("moviesTable"),
-      p("Note: This table shows holiday movies released in the selected year and genre.")
+
+      # Provide interpretation for the outputs
+      p("Interpretation: This table helps you explore the holiday movies dataset based on your selected year and genre."),
+
+      # Static interactive Plotly bar plot for overall genre distribution
+      plotlyOutput("genreBarPlot"),
+      p("This bar plot shows the count of all genres across the entire dataset.")
     )
   )
 )
 
-# Define server logic for filtering data and rendering the table
+# Define server logic for filtering data and rendering the table and static plot
 server <- function(input, output) {
 
   # Reactive data based on selected year and genre
@@ -42,9 +59,32 @@ server <- function(input, output) {
   output$moviesTable <- renderTable({
     filtered_movies() %>%
       mutate(
-        year = as.integer(year),                   # Remove decimal points from year
+        year = as.integer(year),                    # Remove decimal points from year
         runtime_minutes = as.integer(runtime_minutes),  # Remove decimal points from runtime
         num_votes = as.integer(num_votes)              # Remove decimal points from num_votes
+      )
+  })
+
+  # Static Plotly bar plot showing the count of all genres across the entire dataset
+  output$genreBarPlot <- renderPlotly({
+    # Count the occurrences of each genre across the whole dataset
+    genre_counts <- cleaned_holiday_movie_genres %>%
+      count(genres) %>%
+      arrange(desc(n))  # Arrange in descending order for better visualization
+
+    # Convert genres to factor to preserve the descending order
+    genre_counts$genres <- factor(genre_counts$genres, levels = genre_counts$genres)
+
+    # Create a color vector: red for top 5 genres, blue for the rest
+    colors <- ifelse(1:nrow(genre_counts) <= 5, 'red', 'steelblue')
+
+    # Create an interactive Plotly bar plot with custom colors
+    plot_ly(genre_counts, x = ~genres, y = ~n, type = 'bar', marker = list(color = colors)) %>%
+      layout(
+        title = "Popular Genre in Holiday Movies",
+        xaxis = list(title = "Genre", tickangle = -45),
+        yaxis = list(title = "Count"),
+        barmode = 'stack'
       )
   })
 }
