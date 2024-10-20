@@ -16,3 +16,6 @@ holiday_movies <- holiday_movies %>%
   mutate(across(c(christmas, hanukkah, kwanzaa), as.integer))
 
 
+usethis::use_data(holiday_movies, overwrite = TRUE)
+usethis::use_data(cleaned_holiday_movie_genres, overwrite = TRUE)
+

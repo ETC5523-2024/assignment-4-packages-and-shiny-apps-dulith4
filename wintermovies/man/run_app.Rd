@@ -2,10 +2,11 @@
 % Please edit documentation in R/run_app.R
 \name{run_app}
 \alias{run_app}
-\title{Launch Shiny App for Holiday Movies}
+\title{Run Shiny App for Holiday Movies}
 \usage{
 run_app()
 }
 \description{
 This function launches the Shiny app included in the wintermovies package.
+Which allows the users to know holiday movies.
 }
