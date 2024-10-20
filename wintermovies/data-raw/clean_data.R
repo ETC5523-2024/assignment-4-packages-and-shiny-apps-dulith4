@@ -4,7 +4,7 @@ library(tidyr)
 
 # Read the data
 holiday_movies <- read_csv("data-raw/holiday_movies.csv")
-holiday_movie_genres <- read_csv("data-raw/holiday_movie_genres.csv")
+holiday_movie_genres <- read_csv("data-raw/holiday_movies_genres.csv")
 
 # Remove irrelevant genres
 irrelevant_genres <- c("Music", "Talk-Show", "News", "Reality-TV", "Sport")
