@@ -26,6 +26,20 @@ library(wintermovies)
 ```
 
 
+The datasets which been used for the package
+```{r datasets}
+data("holiday_movies")
+data("cleaned_holiday_movie_genres")
+```
+
+
+Summary of the datasets
+```{r summary}
+summary(holiday_movies)
+summary(cleaned_holiday_movie_genres)
+```
+
+
 ## Shiny App
 
 You can also check the Shiny App which is part of the package 
