@@ -39,11 +39,19 @@ pak::pak("ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r example, message=FALSE, warning=FALSE}
 library(wintermovies)
+data("holiday_movies")
+data("cleaned_holiday_movie_genres")
 ## basic example code
 ```
 
+The Summary of the Dataset
+
+```{r}
+summary(holiday_movies)
+summary(cleaned_holiday_movie_genres)
+```
 
 ## Shiny App
 
