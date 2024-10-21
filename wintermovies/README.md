@@ -35,5 +35,10 @@ library(wintermovies)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Shiny App
+
+You can also check the Shiny App which is part of the package
+
+``` r
+wintermovies::run_app()
+```
