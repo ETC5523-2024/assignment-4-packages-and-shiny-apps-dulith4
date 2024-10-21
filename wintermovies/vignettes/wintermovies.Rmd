@@ -14,6 +14,23 @@ knitr::opts_chunk$set(
 )
 ```
 
+The goal of wintermovies is on the Holiday Movies which has been released between 1929-2023 and how all these holiday movies represent the different holidays of the season such as **Christmas**, **kwanzaa** and **Hanukkah**. 
+
+## Installation
+
+You can install the development version of wintermovies from [GitHub](https://github.com/ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4/tree/main/wintermovies) with:
+
+
 ```{r setup}
 library(wintermovies)
 ```
+
+
+## Shiny App
+
+You can also check the Shiny App which is part of the package 
+
+```{r, eval=FALSE}
+wintermovies::run_app()
+```
+
