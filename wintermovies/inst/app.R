@@ -40,7 +40,9 @@ ui <- fluidPage(
 
       # Static interactive Plotly bar plot for overall genre distribution
       plotlyOutput("genreBarPlot"),
-      p("This bar plot shows the count of all genres across the entire dataset.")
+      p("This bar plot shows the count of all genres across the entire dataset.
+        The bars which are highlighted (red) are the most popular genres in the
+        holiday movies as users will know the popular genres.")
     )
   )
 )
@@ -82,7 +84,7 @@ server <- function(input, output) {
     plot_ly(genre_counts, x = ~genres, y = ~n, type = 'bar', marker = list(color = colors)) %>%
       layout(
         title = "Popular Genre in Holiday Movies",
-        xaxis = list(title = "Genre", tickangle = -45),
+        xaxis = list(title = "Genre", tickangle = -90),
         yaxis = list(title = "Count"),
         barmode = 'stack'
       )
