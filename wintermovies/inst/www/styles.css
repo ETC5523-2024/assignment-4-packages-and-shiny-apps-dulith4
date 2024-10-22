@@ -1,0 +1,6 @@
+/* styles.css */
+h2 {
+  background-color:#0bbb7b ;
+  color: white; /* Optional: to change text color to white */
+  padding: 15px; /* Add some padding for a nice look */
+}

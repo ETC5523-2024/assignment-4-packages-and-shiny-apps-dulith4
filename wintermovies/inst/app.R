@@ -12,7 +12,9 @@ load(system.file("data", "cleaned_holiday_movie_genres.rda", package = "wintermo
 # Define UI for the Shiny app
 
 ui <- fluidPage(
-  theme = bs_theme(bootswatch = "minty"),  # Apply a theme from bslib
+  theme = bs_theme(bootswatch = "minty"),
+
+  tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
 
   titlePanel("Holiday Movies Explorer"),
 
@@ -22,7 +24,7 @@ ui <- fluidPage(
       selectInput("genre", "Select Genre", choices = unique(cleaned_holiday_movie_genres$genres)),
       p("Use the dropdown menus to filter the data by year and genre."),
 
-      # Add descriptions for the table columns using tags$ul and tags$li
+
       p("The table below shows holiday movies from the selected year and genre. The columns represent:"),
       tags$ul(
         tags$li("Year: The year the movie was released"),
@@ -61,9 +63,9 @@ server <- function(input, output) {
   output$moviesTable <- renderTable({
     filtered_movies() %>%
       mutate(
-        year = as.integer(year),                    # Remove decimal points from year
-        runtime_minutes = as.integer(runtime_minutes),  # Remove decimal points from runtime
-        num_votes = as.integer(num_votes)              # Remove decimal points from num_votes
+        year = as.integer(year),
+        runtime_minutes = as.integer(runtime_minutes),
+        num_votes = as.integer(num_votes)
       )
   })
 
