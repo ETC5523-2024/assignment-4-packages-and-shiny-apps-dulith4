@@ -41,7 +41,9 @@ ui <- fluidPage(
       p("Interpretation: This table helps you explore the holiday movies dataset based on your selected year and genre."),
 
       # Static interactive Plotly bar plot for overall genre distribution
-      plotlyOutput("genreBarPlot"),
+      div(class = "user-select-none_svg-container",
+          plotlyOutput("genreBarPlot")
+      ),
       p("This bar plot shows the count of all genres across the entire dataset.
         The bars which are highlighted (red) are the most popular genres in the
         holiday movies as users will know the popular genres.")

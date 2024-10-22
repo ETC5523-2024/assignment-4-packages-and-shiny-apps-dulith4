@@ -4,3 +4,10 @@ h2 {
   color: white; /* Optional: to change text color to white */
   padding: 15px; /* Add some padding for a nice look */
 }
+
+
+.user-select-none_svg-container {
+  border: 2px solid #2c3e50;
+  padding: 10px;
+  margin-top: 20px;
+}
