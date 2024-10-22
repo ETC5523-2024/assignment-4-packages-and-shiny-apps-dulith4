@@ -6,6 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
+<img src="man/figures/logo.png" alt="wintermovies hex sticker" width="150" style="float:right; margin-left:15px;" />
+
 The goal of wintermovies is on the Holiday Movies which has been
 released between 1929-2023 and how all these holiday movies represent
 the different holidays of the season such as **Christmas**, **kwanzaa**
