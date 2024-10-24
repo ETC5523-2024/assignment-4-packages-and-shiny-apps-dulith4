@@ -18,12 +18,22 @@ site](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-dulith
 
 ## Installation
 
-You can install the development version of wintermovies from
+You can install the development version of wintermovies package from
 [GitHub](https://github.com/ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4/tree/main/wintermovies)
 with:
 
 ``` r
 remotes::install_github("ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4", subdir = "wintermovies")
+#> ── R CMD build ─────────────────────────────────────────────────────────────────
+#>          checking for file 'C:\Users\hansa\AppData\Local\Temp\Rtmp69Zd0J\remotes40142ab43969\ETC5523-2024-assignment-4-packages-and-shiny-apps-dulith4-4b6a413\wintermovies/DESCRIPTION' ...     checking for file 'C:\Users\hansa\AppData\Local\Temp\Rtmp69Zd0J\remotes40142ab43969\ETC5523-2024-assignment-4-packages-and-shiny-apps-dulith4-4b6a413\wintermovies/DESCRIPTION' ...   ✔  checking for file 'C:\Users\hansa\AppData\Local\Temp\Rtmp69Zd0J\remotes40142ab43969\ETC5523-2024-assignment-4-packages-and-shiny-apps-dulith4-4b6a413\wintermovies/DESCRIPTION' (577ms)
+#>       ─  preparing 'wintermovies': (978ms)
+#>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information
+#>       ─  checking for LF line-endings in source and make files and shell scripts (601ms)
+#> ─  checking for empty or unneeded directories
+#>   ─  looking to see if a 'data/datalist' file should be added
+#> ─  building 'wintermovies_0.0.0.9000.tar.gz'
+#>      
+#> 
 ```
 
 ``` r

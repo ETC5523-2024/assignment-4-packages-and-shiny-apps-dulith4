@@ -29,7 +29,7 @@ You can find the full package documentation at the [pkgdown site](https://etc552
 
 ## Installation
 
-You can install the development version of wintermovies from [GitHub](https://github.com/ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4/tree/main/wintermovies) with:
+You can install the development version of wintermovies  package from [GitHub](https://github.com/ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4/tree/main/wintermovies) with:
 
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
 remotes::install_github("ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4", subdir = "wintermovies")
