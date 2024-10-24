@@ -44,7 +44,7 @@ pak::pak("ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how the package work:
 
 ```{r example, message=FALSE, warning=FALSE}
 library(wintermovies)
