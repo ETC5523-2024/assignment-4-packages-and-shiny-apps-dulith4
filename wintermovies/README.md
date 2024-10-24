@@ -13,6 +13,9 @@ released between 1929-2023 and how all these holiday movies represent
 the different holidays of the season such as **Christmas**, **kwanzaa**
 and **Hanukkah**.
 
+You can find the full package documentation at the [pkgdown
+site](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-dulith4/).
+
 ## Installation
 
 You can install the development version of wintermovies from
@@ -30,7 +33,7 @@ pak::pak("ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how the package work:
 
 ``` r
 library(wintermovies)
