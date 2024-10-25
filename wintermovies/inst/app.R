@@ -81,10 +81,10 @@ server <- function(input, output) {
 
     genre_counts$genres <- factor(genre_counts$genres, levels = genre_counts$genres)
 
-    # Create a color vector: red for top 5 genres, blue for the rest
+
     colors <- ifelse(1:nrow(genre_counts) <= 5, 'red', 'darkgreen')
 
-    # Create an interactive Plotly bar plot with custom colors
+
     plot_ly(genre_counts, x = ~genres, y = ~n, type = 'bar', marker = list(color = colors)) %>%
       layout(
         title = "Popular Genre in Holiday Movies",

@@ -1,8 +1,8 @@
 /* styles.css */
 h2 {
   background-color:#0bbb7b ;
-  color: white; /* Optional: to change text color to white */
-  padding: 15px; /* Add some padding for a nice look */
+  color: white;
+  padding: 15px;
 }
 
 
@@ -10,4 +10,9 @@ h2 {
   border: 2px solid #2c3e50;
   padding: 10px;
   margin-top: 20px;
+}
+
+
+form.well {
+  background-color: #ee6a23;
 }
