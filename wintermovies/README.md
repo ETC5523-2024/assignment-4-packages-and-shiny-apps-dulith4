@@ -10,7 +10,7 @@
 
 The goal of wintermovies is on the Holiday Movies which has been
 released between 1929-2023 and how all these holiday movies represent
-the different holidays of the season such as **Christmas**, **kwanzaa**
+the different holidays of the season such as **Christmas**, **Kwanzaa**
 and **Hanukkah**.
 
 You can find the full package documentation at the [pkgdown
@@ -24,16 +24,6 @@ with:
 
 ``` r
 remotes::install_github("ETC5523-2024/assignment-4-packages-and-shiny-apps-dulith4", subdir = "wintermovies")
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>          checking for file 'C:\Users\hansa\AppData\Local\Temp\RtmpywAQBV\remotesf54251b6d12\ETC5523-2024-assignment-4-packages-and-shiny-apps-dulith4-5e5dd00\wintermovies/DESCRIPTION' ...     checking for file 'C:\Users\hansa\AppData\Local\Temp\RtmpywAQBV\remotesf54251b6d12\ETC5523-2024-assignment-4-packages-and-shiny-apps-dulith4-5e5dd00\wintermovies/DESCRIPTION' ...   ✔  checking for file 'C:\Users\hansa\AppData\Local\Temp\RtmpywAQBV\remotesf54251b6d12\ETC5523-2024-assignment-4-packages-and-shiny-apps-dulith4-5e5dd00\wintermovies/DESCRIPTION' (486ms)
-#>       ─  preparing 'wintermovies': (502ms)
-#>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information
-#>       ─  checking for LF line-endings in source and make files and shell scripts (763ms)
-#>   ─  checking for empty or unneeded directories
-#> ─  looking to see if a 'data/datalist' file should be added
-#>   ─  building 'wintermovies_0.0.0.9000.tar.gz'
-#>      
-#> 
 ```
 
 ``` r
