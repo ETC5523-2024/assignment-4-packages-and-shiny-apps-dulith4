@@ -30,7 +30,7 @@ ui <- fluidPage(
         tags$li("Year: The year the movie was released"),
         tags$li("Runtime Minutes: The length of the movie in minutes"),
         tags$li("Num Votes: The number of votes the movie has received on IMDb"),
-        tags$li("Genre: The genre of the movie")
+        tags$li("Genre: The genre of the movies")
       )
     ),
 
